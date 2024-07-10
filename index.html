@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Local Database Scenario</title>
+  </head>
+  <body>
+    <h1>User Data</h1>
+    <button onclick="fetchAndDisplayUsers()">Fetch Users</button>
+    <div id="userData"></div>
+
+    <h1>Local Database Scenario</h1>
+
+    <h2>Add User</h2>
+    <form id="userForm" action="http://localhost:3000/addUser" method="POST">
+      <input type="text" name="username" placeholder="Username" />
+      <input type="email" name="email" placeholder="Email" />
+      <button type="submit">Add User</button>
+    </form>
+    <script src="script.js"></script>
+
+    <div id="updateUser" class="hidden">
+      <h2>Update User</h2>
+      <form id="updateForm">
+        <input type="hidden" name="id" id="updateId" />
+        <input type="text" name="username" id="updateUsername" placeholder="Username" />
+        <input type="email" name="email" id="updateEmail" placeholder="Email" />
+        <button type="button" onclick="editUser()">Update User</button>
+      </form>
+    </div>
+  </body>
+</html>
